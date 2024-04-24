@@ -1,0 +1,57 @@
+/* -- Google font import -- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+/* -- Global Styling -- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* -- ** HERO PAGE STYLING ** -- */
+
+/* -- Hero Container -- */
+.hero-container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(25, 23, 28, 0.9), rgba(19, 4, 70, 0.9)), url(../images/hero-bg-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    color: #ffffff;
+    padding: 0 10%;
+    position: relative;
+}
+/* -- Content Container -- */
+.content-container {
+    display: grid;
+    grid-template-rows: auto 70px;
+} 
+/* -- Content Top Container -- */
+.content-top-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+.content-top-container h1 {
+    font-size: 55px;
+    color: #f2ff04;
+}
+.content-top-container h1 span {
+    color: red;
+}
+.content-top-container p {
+    font-size: 18px;
+}
