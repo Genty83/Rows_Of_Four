@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rows Of Four is a game where you connect 4 coins in a row">
+
+    <!-- Title Tag -->
+    <title>Rows Of Four</title>
+
+    <!-- Link Tags -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+
+    <!-- Script Tags -->
+    <script type="module" src="assets/js/index.js"></script>
+
+</head>
+<body>
+
+    <!-- Hero Container Start -->
+    <section class="hero-container">
+
+        <!-- Instructions Container end -->
+        <form id="instructions-form" class="instructions-container">
+            <div class="instructions-header-container">
+                <!-- H2 Tag -->
+                <h2>Instructions</h2>
+                <!-- Close Button -->
+                <button id="instructions-close-btn" class="close-btn" type="button">
+                    <i class="fa fa-close" title="Close">
+
+                    </i>
+                </button>
+            </div>
+            <div class="seperator"></div>
+            <p>
+                The rules of the game are simple! <br><br>
+                Connect 4 coins in a row, this can be done either vertically, horizontally or diagonally.
+                <br>
+                Prior to starting the game, a popup will appear showing the game options. <br><br>
+                Here you can add your name, and customise the colours of the board and coins aswell as the background.
+            </p>
+        </form>
+        <!-- Content Container Start -->
+        <div class="content-container">
+
+            <!-- Content Top Container Start -->
+            <div class="content-top-container">
+                <h1>Rows Of <span>Four</span></h1>
+                <p>
+                    Welcome to Rows Of Four!!<br>
+                    Relive this classic game, all at the click of a button! <br>
+                    Pit your wits against the computer and see if you have what it takes to get four in a row!!
+                </p>
+                <div class="btn-container">
+
+                    <button id="start-game-btn" class="btn" type="button">New Game
+                        <span class="material-symbols-outlined">
+                            arrow_right_alt
+                        </span>
+                    </button>
+
+                    <button id="instructions-btn" class="btn" type="button">Instructions
+                        <span class="material-symbols-outlined">
+                            arrow_right_alt
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+            <!-- Content Top Container End -->
+
+            <!-- Content Bottom Container Start -->
+            <div class="content-bottom-container">
+
+                <a href="https://www.facebook.com/" target="_blank" class="social-media-btn" aria-label="Link to facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" class="social-media-btn" aria-label="Link to instgram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.twitter.com/" target="_blank" class="social-media-btn" aria-label="Link to twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" class="social-media-btn" aria-label="Link to youtube">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+
+            </div>
+            <!-- Content Bottom Container End -->
+
+        </div>
+        <!-- Content Container End -->
+
+    </section>
+    <!-- Hero Container End -->
+
+    <!-- Game Container Start -->
+    <section class="game-container">
+        <header class="game-page-header">
+            <h2>Rows Of <span>Four</span></h2>
+            <div class="icon-container">
+
+                <span id="game-volume-btn" class="material-symbols-outlined game-header-icon" title="Set Game Sounds">
+                    volume_up
+                </span>
+
+                <span id="game-home-btn" class="material-symbols-outlined game-header-icon" title="Home">
+                    home
+                </span>
+
+            </div>
+
+        </header>
+        <!-- All GAME CODE WILL BE ADDED USING JAVASCRIPT AND THE CANVAS ELEMENT -->
+    </section>
+    <!-- Game Container End -->
+
+</body>
+</html>
