@@ -19,12 +19,13 @@ export const SETTINGS = {
   pColorDark: '#B71C1C',
   cColor: '#FFEB3B',
   cColorDark: '#FDD835',
-  bgColor: 'mintcream',
+  bgColor: 'white',
   frameColor: 'blue',
   frameColorDark: 'navy',
   gameSounds: true
 };
 // Constants
+const HOME_BTN = document.getElementById('game-home-btn');
 const DELAY_COMP = 2; // seconds for the computer to take its turn
 const GRID_COLS = 7; // number of grid columns
 const GRID_ROWS = 6; // number of grid rows
@@ -43,9 +44,34 @@ if (GAME_CONTAINER.style.display != 'none') {
   var height, width, margin;
   // Append canvas to game container
   GAME_CONTAINER.appendChild(canv);
+
+  // Call the set dimensions function
+  setDimensions();
+
+  // ** Event Listeners **
+  // Calls the setDimensions function to resize container
+  window.addEventListener("resize", setDimensions); 
+  // Connects the home icon button to go back to landing page
+  HOME_BTN.addEventListener('click', goToHomePage);
 }
 
+/**Function [goToHomePage] - Go to home page */
+function goToHomePage() {
+  HERO_CONTAINER.style.display = 'grid';
+  GAME_CONTAINER.style.display = 'none';
+}
 
+/** Function: Sets the dimensions of the board */
+function setDimensions() {
+
+  height = window.innerHeight * 0.90;
+  width = window.innerWidth;
+  canv.height = height;
+  canv.width = width;
+  margin = MARGIN * Math.min(height, width);
+  // Call the new game function
+  
+}
 
 // Export functions for testing purposes
 
