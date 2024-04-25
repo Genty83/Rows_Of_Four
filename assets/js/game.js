@@ -61,6 +61,24 @@ function goToHomePage() {
   GAME_CONTAINER.style.display = 'none';
 }
 
+/**Export Function [gameLoop] - Starts the game loop */
+export function gameLoop(timeNow) {
+  // initialise timeLast
+  if (!timeLast) {
+    timeLast = timeNow;
+  }
+  // calculate the time difference
+  timeDelta = (timeNow - timeLast) / 1000; // seconds
+  timeLast = timeNow;
+  // update go computer function
+  
+  // Fill the canvas background color
+  fillCanvasBackground();
+
+  // call the next frame
+  requestAnimationFrame(gameLoop);
+}
+
 /** Function: Sets the dimensions of the board */
 function setDimensions() {
 
@@ -71,6 +89,12 @@ function setDimensions() {
   margin = MARGIN * Math.min(height, width);
   // Call the new game function
   
+}
+
+/**Function [fillCanvasBackground] - Fills the canvas background */
+function fillCanvasBackground() {
+  ctx.fillStyle = SETTINGS.bgColor;
+  ctx.fillRect(0, 0, width, height);
 }
 
 // Export functions for testing purposes
