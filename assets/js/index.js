@@ -36,4 +36,7 @@ function startGame() {
   // Switch container
   HERO_CONTAINER.style.display = 'none';
   GAME_CONTAINER.style.display = 'flex';
+
+  // game loop
+  requestAnimationFrame(gameLoop);
 }
