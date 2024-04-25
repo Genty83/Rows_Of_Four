@@ -24,8 +24,45 @@
     <!-- Hero Container Start -->
     <section class="hero-container">
 
+        <!-- Options Menu Start -->
+        <form action="#" class="options-menu">
+
+            <div class="options-header-container">
+                <h1>Game Options</h1>
+                <!-- Close Button -->
+                <button id="instructions-close-btn" class="close-btn" type="button">
+                    <i class="fa fa-close" title="Close"></i>
+                </button>
+            </div>
+
+            <div class="opt-content-container">
+                <!-- Player name -->
+                <label for="p-name">Enter Player Name</label>
+                <input id="p-name" class="custom-input" type="text" placeholder="Enter Name:">
+                <!-- Player color -->
+                <label for="p-color">Select Player Colour:</label>
+                <input type="color" name="p-color" id="p-color" value="#ff0000">
+                <!-- Computer color -->
+                <label for="c-color">Select Computer Colour:</label>
+                <input type="color" name="c-color" id="c-color" value="#ffee00">
+                <!-- Bg color -->
+                <label for="bg-color">Select Background Colour:</label>
+                <input type="color" name="bg-color" id="bg-color" value="#ffffff">
+                <!-- Board color -->
+                <label for="brd-color">Select Board Colour:</label>
+                <input type="color" name="brd-color" id="brd-color" value="#0000ff">
+
+                <!-- Button -->
+                <button id="opt-save-btn" class="options-start-btn" type="button">
+                    Save
+                </button>
+            </div>
+
+        </form>
+        <!-- Options Menu End -->
+
         <!-- Instructions Container end -->
-        <form id="instructions-form" class="instructions-container">
+        <form action="#" id="instructions-form" class="instructions-container">
             <div class="instructions-header-container">
                 <!-- H2 Tag -->
                 <h2>Instructions</h2>
