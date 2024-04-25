@@ -97,5 +97,15 @@ function fillCanvasBackground() {
   ctx.fillRect(0, 0, width, height);
 }
 
+/**Function: Creates a new game */
+export function newGame() {
+  // Use math.random to determine which player starts
+  playersTurn = Math.random() < 0.5;
+  gameOver = false;
+  gameTied = false;
+  // Call the createGrid function
+}
+
+
 // Export functions for testing purposes
 
