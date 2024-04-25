@@ -5,7 +5,7 @@
  */
 
 // Imports - Add all imported functions and classes underneather this line.
-import { SETTINGS, GAME_CONTAINER, HERO_CONTAINER } from "./game.js";
+import { SETTINGS, GAME_CONTAINER, HERO_CONTAINER, gameLoop } from "./game.js";
 
 // Constants
 const START_BTN = document.getElementById('start-game-btn');
