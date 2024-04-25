@@ -9,6 +9,7 @@
  */
 
 // Imports - All all imports underneath here.
+import { GridCell } from "./classes.js";
 
 // Exported constants
 export const GAME_CONTAINER = document.querySelector('.game-container');
@@ -74,6 +75,8 @@ export function gameLoop(timeNow) {
   
   // Fill the canvas background color
   fillCanvasBackground();
+  // Draw the grid
+  drawGrid();
 
   // call the next frame
   requestAnimationFrame(gameLoop);
@@ -88,13 +91,71 @@ function setDimensions() {
   canv.width = width;
   margin = MARGIN * Math.min(height, width);
   // Call the new game function
-  
+  newGame();
 }
 
 /**Function [fillCanvasBackground] - Fills the canvas background */
 function fillCanvasBackground() {
   ctx.fillStyle = SETTINGS.bgColor;
   ctx.fillRect(0, 0, width, height);
+}
+
+/**Function [drawGrid] - Draws the board on the canvas */
+function drawGrid() {
+
+  // frame and button
+  let cell = grid[0][0];
+  let fh = cell.h * GRID_ROWS;
+  let fw = cell.w * GRID_COLS;
+  ctx.fillStyle = SETTINGS.frameColor;
+  ctx.fillRect(cell.left, cell.top, fw, fh);
+
+  ctx.lineWidth = 6;
+  ctx.strokeStyle = SETTINGS.frameColorDark;
+  ctx.strokeRect(cell.left, cell.top, fw, fh);
+
+  ctx.fillStyle = SETTINGS.frameColorDark;
+  ctx.fillRect(cell.left - margin / 2, cell.top + fh - margin / 2, fw + margin, margin);
+
+  // cells
+  for (let row of grid) {
+    for (let cell of row) {
+      cell.drawCell(ctx, SETTINGS);
+    }
+  }
+}
+
+/**Function [createGrid] - Creates the grid */
+function createGrid() {
+
+  grid = [];
+
+  // set up cell size and margins
+  let cell, marginX, marginY;
+
+  // portrait mode
+  if ((width - margin * 2) * GRID_ROWS / GRID_COLS < height - margin * 2) {
+    cell = (width - margin * 2) / GRID_COLS;
+    marginX = margin;
+    marginY = (height - cell * GRID_ROWS) / 2;
+  }
+
+  // landscape mode
+  else {
+    cell = (height - margin * 2) / GRID_ROWS;
+    marginX = (width - cell * GRID_COLS) / 2;
+    marginY = margin;
+  }
+
+  // populate the grid
+  for (let i = 0; i < GRID_ROWS; i++) {
+    grid[i] = [];
+    for (let j = 0; j < GRID_COLS; j++) {
+      let left = marginX + j * cell;
+      let top = marginY + i * cell;
+      grid[i][j] = new GridCell(left, top, cell, cell, i, j);
+    }
+  }
 }
 
 /**Function: Creates a new game */
@@ -104,6 +165,7 @@ export function newGame() {
   gameOver = false;
   gameTied = false;
   // Call the createGrid function
+  createGrid()
 }
 
 
