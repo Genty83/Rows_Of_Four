@@ -155,3 +155,28 @@ body {
     box-shadow: 0px 0px 5px #f5f5f5;
     transform: rotateY(360deg);
 }
+
+/* -- ** MEDIA QUERIES ** -- */
+@media all and (min-width: 700px) {
+
+    /* -- Content Container -- */
+    .content-container {
+        display: grid;
+        grid-template-columns: auto 70px;
+    } 
+
+    /* -- Content Top Container -- */
+    .content-top-container {
+        text-align: left;
+        align-items: start;
+    }
+
+    /* -- Content Bottom Container -- */
+    .content-bottom-container {
+        flex-direction: column;
+    }
+
+    .btn-container {
+        flex-direction: row;
+    }
+}
