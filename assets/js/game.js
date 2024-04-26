@@ -4,8 +4,10 @@
  * All game related functions are to be added to this file.
  * 
  * A complete list of functions can be seen below.
- * >>>
- * 
+ * >>> goToHomePage - Takes you back to the home page.
+ * >>> gameLoop - Starts the game loop.
+ * >>> setDimensions - Sets the canvas dimensions.
+ * >>> fillCanvasBackground - Fills the canvas background color.
  */
 
 // Imports - All all imports underneath here.
@@ -156,6 +158,44 @@ function createGrid() {
       grid[i][j] = new GridCell(left, top, cell, cell, i, j);
     }
   }
+}
+
+/**Function [highlightCell] - Highlights the cell border when the cursor hovers over it. */
+function highlightCell(x, y) {
+  let col = null;
+  for (let row of grid) {
+    for (let cell of row) {
+
+      // clear existing highlighting
+      cell.highlight = null;
+
+      // get the column
+      if (cell.contains(x, y)) {
+        col = cell.col;
+      }
+    }
+  }
+
+  if (col == null) {
+    return;
+  }
+
+  // highlight the first unoccupied cell 
+  for (let i = GRID_ROWS - 1; i >= 0; i--) {
+    if (grid[i][col].owner == null) {
+      grid[i][col].highlight = playersTurn;
+      return grid[i][col];
+    }
+  }
+  return null;
+}
+
+/**Funtion [highlightGrid] -  */
+function highlightGrid(/** @type {MouseEvent} */ ev) {
+  if (!playersTurn || gameOver) {
+    return;
+  }
+  highlightCell(ev.clientX, ev.clientY);
 }
 
 /**Function: Creates a new game */
