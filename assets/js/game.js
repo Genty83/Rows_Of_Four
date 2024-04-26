@@ -136,6 +136,42 @@ function checkWin(row, col) {
   return winner(diagL) || winner(diagR) || winner(horiz) || winner(vert);
 }
 
+/**Function [winner] - Checks the board for a potential winner */
+function winner(cells = []) {
+
+  let count = 0, lastOwner = null;
+  let winningCells = [];
+  for (let i = 0; i < cells.length; i++) {
+
+    // If there is no owner, reset the count
+    if (cells[i].owner == null) {
+      count = 0;
+      winningCells = [];
+    }
+    // If it the same owner, add to the count
+    else if (cells[i].owner == lastOwner) {
+      count++;
+      winningCells.push(cells[i]);
+    }
+    // If there is a new owner then new count
+    else {
+      count = 1;
+      winningCells = [];
+      winningCells.push(cells[i]);
+    }
+    // set the lastOwner
+    lastOwner = cells[i].owner;
+    // four in a row is a win
+    if (count == 4) {
+      for (let cell of winningCells) {
+        cell.winner = true;
+      }
+      return true;
+    }
+  }
+  return false;
+}
+
 /**Function [fillCanvasBackground] - Fills the canvas background */
 function fillCanvasBackground() {
   ctx.fillStyle = SETTINGS.bgColor;
@@ -283,10 +319,7 @@ function selectCell() {
   if (!gameOver) {
     playersTurn = !playersTurn;
   }
-  if (SETTINGS.gameSounds) {
-    // Call method from GameSound class to play coin drop sound
-    GAME_SOUND.playSound('assets/audio/coin-drop.mp3');
-  }
+  // Game sound function will go here
 }
 
 /** Function: Sets the dimensions of the board */
