@@ -56,6 +56,9 @@ if (GAME_CONTAINER.style.display != 'none') {
   window.addEventListener("resize", setDimensions); 
   // Connects the home icon button to go back to landing page
   HOME_BTN.addEventListener('click', goToHomePage);
+  // Add click events to canvas
+  canv.addEventListener("click", click);
+  canv.addEventListener("mousemove", highlightGrid);
 }
 
 /**Function [goToHomePage] - Go to home page */
@@ -84,17 +87,6 @@ export function gameLoop(timeNow) {
   requestAnimationFrame(gameLoop);
 }
 
-/** Function: Sets the dimensions of the board */
-function setDimensions() {
-
-  height = window.innerHeight * 0.90;
-  width = window.innerWidth;
-  canv.height = height;
-  canv.width = width;
-  margin = MARGIN * Math.min(height, width);
-  // Call the new game function
-  newGame();
-}
 
 /**Function [fillCanvasBackground] - Fills the canvas background */
 function fillCanvasBackground() {
@@ -196,6 +188,69 @@ function highlightGrid(/** @type {MouseEvent} */ ev) {
     return;
   }
   highlightCell(ev.clientX, ev.clientY);
+}
+
+/**Function [selectCell] - Selects the cell to fill on the board */
+function selectCell() {
+
+  let highlighting = false;
+  OUTER: for (let row of grid) {
+    for (let cell of row) {
+      if (cell.highlight != null) {
+        highlighting = true;
+        cell.highlight = null;
+        cell.owner = playersTurn;
+        if (checkWin(cell.row, cell.col)) {
+          gameOver = true;
+        }
+        break OUTER;
+      }
+    }
+  }
+
+  // don't allow selection if no highlighting
+  if (!highlighting) {
+    return;
+  }
+
+  // check for a tied game
+  if (!gameOver) {
+    gameTied = true;
+    OUTER: for (let row of grid) {
+      for (let cell of row) {
+        if (cell.owner == null) {
+          gameTied = false;
+          break OUTER;
+        }
+      }
+    }
+
+    // set game over
+    if (gameTied) {
+      gameOver = true;
+    }
+  }
+
+  // switch the player if no game over
+  if (!gameOver) {
+    playersTurn = !playersTurn;
+  }
+  if (SETTINGS.gameSounds) {
+    // Call method from GameSound class to play coin drop sound
+    GAME_SOUND.playSound('assets/audio/coin-drop.mp3');
+  }
+}
+
+/** Function: Sets the dimensions of the board */
+function setDimensions() {
+
+  height = window.innerHeight * 0.90;
+  width = window.innerWidth;
+  canv.height = height;
+  canv.width = width;
+  margin = MARGIN * Math.min(height, width);
+  // Call the new game function
+  newGame();
 }
 
 /**Function: Creates a new game */
