@@ -66,14 +66,14 @@ function startGame() {
     SETTINGS.cColorDark = new ConvertColor(cColor, -40).shadeColor();
   }
 
-  if (cColor == cColor || pColor == bgColor || cColor == brdColor) {
+  if (cColor == pColor || cColor == bgColor || cColor == brdColor) {
     alert(alertmsg);
     return;
   } else {
-    SETTINGS.pColor = pColor;
+    SETTINGS.cColor = cColor;
   }
   
-  if (bgColor == pColor || bgColor == c || cColor == brdColor) {
+  if (bgColor == pColor || bgColor == cColor || bgColor == brdColor) {
     alert(alertmsg);
     return;
   } else {
