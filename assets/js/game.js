@@ -87,6 +87,54 @@ export function gameLoop(timeNow) {
   requestAnimationFrame(gameLoop);
 }
 
+/**Function [click] - Called when the user clicks on a cell in the board */
+function click() {
+
+  if (gameOver) {
+    newGame();
+    return;
+  }
+
+  if (!playersTurn) {
+    return;
+  }
+
+  selectCell();
+}
+
+/**Function [checkWin] - Checks if the game is a win */
+function checkWin(row, col) {
+
+  // get all the cells from each direction
+  let diagL = [], diagR = [], horiz = [], vert = [];
+  for (let i = 0; i < GRID_ROWS; i++) {
+    for (let j = 0; j < GRID_COLS; j++) {
+
+      // horizontal cells
+      if (i == row) {
+        horiz.push(grid[i][j]);
+      }
+
+      // vertical cells
+      if (j == col) {
+        vert.push(grid[i][j]);
+      }
+
+      // top left to bottom right
+      if (i - j == row - col) {
+        diagL.push(grid[i][j]);
+      }
+
+      // top right to bottom left
+      if (i + j == row + col) {
+        diagR.push(grid[i][j]);
+      }
+    }
+  }
+
+  // if any have four in a row, return a win!
+  return winner(diagL) || winner(diagR) || winner(horiz) || winner(vert);
+}
 
 /**Function [fillCanvasBackground] - Fills the canvas background */
 function fillCanvasBackground() {
