@@ -77,7 +77,7 @@ export function gameLoop(timeNow) {
   timeDelta = (timeNow - timeLast) / 1000; // seconds
   timeLast = timeNow;
   // update go computer function
-  
+  computerTurn(timeDelta)
   // Fill the canvas background color
   fillCanvasBackground();
   // Draw the grid
@@ -344,6 +344,105 @@ export function newGame() {
   createGrid()
 }
 
+/**Function [goComputer] - Calculates the computers turn.
+ * Checks from a variety of options based on priority order.
+ */
+function computerTurn(delta) {
+
+  // set up the options array
+  let compOptions = [];
+  compOptions[0] = []; // computer wins
+  compOptions[1] = []; // block the player from winning
+  compOptions[2] = []; // no significance
+  compOptions[3] = []; // give away a win
+
+  // If players turn or game over then exit function
+  if (playersTurn || gameOver) {
+    return;
+  }
+
+  // count down till the computer makes its selection
+  if (timeComp > 0) {
+    timeComp -= delta;
+    if (timeComp <= 0) {
+      selectCell();
+    }
+    return;
+  }
+
+  // loop through each column
+  let cell;
+  for (let i = 0; i < GRID_COLS; i++) {
+    cell = highlightCell(grid[0][i].cx, grid[0][i].cy);
+
+    // column full, go to the next column
+    if (cell == null) {
+      continue;
+    }
+
+    // first priority, computer wins
+    cell.owner = playersTurn;
+    if (checkWin(cell.row, cell.col)) {
+      compOptions[0].push(i);
+    } else {
+
+      // second priority, block the player
+      cell.owner = !playersTurn;
+      if (checkWin(cell.row, cell.col)) {
+        compOptions[1].push(i);
+      } else {
+        cell.owner = playersTurn;
+
+        // check the cell above
+        if (cell.row > 0) {
+          grid[cell.row - 1][cell.col].owner = !playersTurn;
+          // last priority, let player win
+          if (checkWin(cell.row - 1, cell.col)) {
+            compOptions[3].push(i);
+          }
+          // third priority, no significance
+          else {
+            compOptions[2].push(i);
+          }
+          // deselect cell above
+          grid[cell.row - 1][cell.col].owner = null;
+        }
+        // no row above, third priority, no significance
+        else {
+          compOptions[2].push(i);
+        }
+      }
+    }
+
+    // cancel highlight and selection
+    cell.highlight = null;
+    cell.owner = null;
+  }
+
+  // clear the winning cells
+  for (let row of grid) {
+    for (let cell of row) {
+      cell.winner = false;
+    }
+  }
+
+  // randomly select a column in priority order
+  let col;
+  if (compOptions[0].length > 0) {
+    col = compOptions[0][Math.floor(Math.random() * compOptions[0].length)];
+  } else if (compOptions[1].length > 0) {
+    col = compOptions[1][Math.floor(Math.random() * compOptions[1].length)];
+  } else if (compOptions[2].length > 0) {
+    col = compOptions[2][Math.floor(Math.random() * compOptions[2].length)];
+  } else if (compOptions[3].length > 0) {
+    col = compOptions[3][Math.floor(Math.random() * compOptions[3].length)];
+  }
+
+  // highlight the selected cell
+  highlightCell(grid[0][col].cx, grid[0][col].cy);
+
+  // set the delay
+  timeComp = DELAY_COMP;
+}
 
 // Export functions for testing purposes
-
