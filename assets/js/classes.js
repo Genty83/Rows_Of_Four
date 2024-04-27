@@ -5,6 +5,7 @@
  * 
  * >>> GridCell:  This class is used to draw the coin on the board
  * >>> ConvertColor: This class coverts the passed in color to a darker shade at the % specified
+ * >>> ResultsWindow: Class for creating the results window to be displayed when the game is over
  */
 
 /**Class [GridCell] - This class is used to draw the coin on the board */
@@ -182,5 +183,39 @@ export class ConvertColor {
       return Math.round(255 * color).toString(16).padStart(2, '0');
     };
     return `#${f(0)}${f(8)}${f(4)}`;
+  }
+}
+
+// Results window class
+export class ResultsWindow {
+  /**
+   * 
+   * @param {Element} container - The html container where the window is to be displayed
+   */
+  constructor(container) {
+    this.con = container;
+
+    // Create window
+    this.win = document.createElement('div');
+    this.win.className = 'results-win';
+    //
+    this.hTag = document.createElement('h1');
+    this.win.append(this.hTag);
+    // Append to container
+    this.con.append(this.win);
+
+  }
+
+  /**Method [show] - Shows the result window and the text to be displayed
+   * @param {string} txt 
+   */
+  show(txt) {
+    this.hTag.textContent = txt;
+    this.win.style.display = 'grid';
+  }
+
+  /**Method [hide] - Hides the results window */
+  hide() {
+    this.win.style.display = 'none';
   }
 }
