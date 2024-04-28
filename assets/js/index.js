@@ -21,22 +21,27 @@ const OPTIONS_MENU_CLOSE_BTN = document.getElementById('options-close-btn');
 if (HERO_CONTAINER.style.display != 'none') {
 
   // Event listeners
-  START_BTN.addEventListener('click', () => {
-    OPTIONS_MENU.style.display = 'grid';
-  });
-
   INSTRUCTIONS_BTN.addEventListener('click', () => {
     INSTRUCTIONS_FORM.style.display = 'block';
+    disableEvents(true);
   });
 
   INSTRUCTIONS_CLOSE_BTN.addEventListener('click', () => {
     INSTRUCTIONS_FORM.style.display = 'none';
+    disableEvents(false);
   });
 }
 
+START_BTN.addEventListener('click', () => {
+  OPTIONS_MENU.style.display = 'grid';
+  disableEvents(true);
+})
+
+
 OPTIONS_MENU_CLOSE_BTN.addEventListener('click', () => {
   OPTIONS_MENU.style.display = 'none';
-});
+  disableEvents(false);
+})
 
 OPTIONS_MENU_SAVE_BTN.addEventListener('click', () => {
   startGame();
@@ -96,4 +101,24 @@ function startGame() {
   OPTIONS_MENU.style.display = 'none';
   // Play new game sound
   newGameSound.play(SETTINGS.gameSounds);
+  // Re-enable events
+  disableEvents(false);
+}
+
+/**
+ * Function [disableEvents] - Disable/enable pointer events for containers
+ * @param {Boolean} state - Boolean value to determine evenets on or off
+ */
+function disableEvents(state) {
+
+  let topContainer = document.querySelector('.content-top-container');
+  let bottomContainer = document.querySelector('.content-bottom-container');
+
+  if (state) {
+    topContainer.style.pointerEvents = 'none';
+    bottomContainer.style.pointerEvents = 'none';
+  } else {
+    topContainer.style.pointerEvents = 'auto';
+    bottomContainer.style.pointerEvents = 'auto';
+  }
 }
