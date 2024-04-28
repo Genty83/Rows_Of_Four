@@ -11,7 +11,7 @@
  */
 
 // Imports - All all imports underneath here.
-import { GridCell, ResultsWindow } from "./classes.js";
+import { GridCell, ResultsWindow, AddGameSound } from "./classes.js";
 
 // Exported constants
 export const GAME_CONTAINER = document.querySelector('.game-container');
@@ -49,6 +49,8 @@ if (GAME_CONTAINER.style.display != 'none') {
   GAME_CONTAINER.appendChild(canv);
   // Create a new instance of the results window
   var resultsWin = new ResultsWindow(GAME_CONTAINER);
+  // Class instances for game sounds
+  var coinSound = new AddGameSound('assets/audio/coin-drop.mp3');
 
   // Call the set dimensions function
   setDimensions();
@@ -325,6 +327,7 @@ function selectCell() {
     playersTurn = !playersTurn;
   }
   // Game sound function will go here
+  coinSound.play(SETTINGS.gameSounds);
 }
 
 /** Function: Sets the dimensions of the board */
