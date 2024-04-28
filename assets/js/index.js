@@ -54,47 +54,43 @@ function startGame() {
   let alertmsg = 'Cannot have 2 colours the same! Please select a different colour!';
 
   // Conditions
-  if (SETTINGS.playerName != '') {
+  if (pName != '') {
     SETTINGS.playerName = pName;
   }
-
   if (pColor == cColor || pColor == bgColor || pColor == brdColor) {
+    alert(alertmsg);
+    return;
+  } else {
+    SETTINGS.pColor = pColor;
+    SETTINGS.pColorDark = new ConvertColor(pColor, -40).shadeColor();
+  }
+  if (cColor == pColor || cColor == bgColor || cColor == brdColor) {
     alert(alertmsg);
     return;
   } else {
     SETTINGS.cColor = cColor;
     SETTINGS.cColorDark = new ConvertColor(cColor, -40).shadeColor();
   }
-
-  if (cColor == pColor || cColor == bgColor || cColor == brdColor) {
-    alert(alertmsg);
-    return;
-  } else {
-    SETTINGS.cColor = cColor;
-  }
-  
   if (bgColor == pColor || bgColor == cColor || bgColor == brdColor) {
     alert(alertmsg);
     return;
   } else {
     SETTINGS.bgColor = bgColor;
   }
-
   if (brdColor == cColor || brdColor == pColor || brdColor == bgColor) {
     alert(alertmsg);
     return;
   } else {
     SETTINGS.frameColor = brdColor;
+    SETTINGS.frameColorDark = new ConvertColor(brdColor, -40).shadeColor();
   }
-
   // Switch container
   HERO_CONTAINER.style.display = 'none';
   GAME_CONTAINER.style.display = 'flex';
-
   // game loop
   requestAnimationFrame(gameLoop);
+  // Call newGame function
   newGame();
-
   // Close the options menu
   OPTIONS_MENU.style.display = 'none';
 }
