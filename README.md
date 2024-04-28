@@ -67,3 +67,27 @@ Visit the deployed website [here]().
 * As a player, I want the game controls to be easy to access during the game.
 
 * As a player, I want to be able to play the game on different devices.
+
+### Color Scheme
+
+![Color scheme image](./assets/images/readme/color-pallete.png)
+
+The colours used in the site are blue (#4f45de) for the nav bar and button hover. The yellow (#f2ff04) and red (#ff0000) are used in the heading text and are the base coin colours in the game.
+There is a mixture of white (#f5f5f5) and black (#191919) text dependent on the background.
+The colours take inspiration from the original board and coin colours from the game.
+
+### Typography
+
+The main font used in the site is Cinzel, with a fallback font of serif as suggested by google fonts.
+
+### Wireframes
+
+[figma](https://figma.com/) has been used to showcase the appearance of the site and display the placement of the different elements wthiin the pages.
+
+Page | Desktop | Mobile
+--- | --- | ---
+Home section | ![Home section desktop image](./assets/images/readme/landing-page-desktop.png) | ![Home section mobile image](./assets/images/readme/landing-page-mobile.png)
+Game section| ![Game section desktop image](./assets/images/readme/game-page-desktop.png) | ![Game section desktop image](./assets/images/readme/game-page-mobile.png)
+404 Page | ![404 page desktop image](./assets/images/readme/404-desktop.png) | ![404 page desktop image](./assets/images/readme/404-mobile.png)
+
+[Back to top ⇧](#Rows_Of_Four)
