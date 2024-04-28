@@ -11,7 +11,7 @@
  */
 
 // Imports - All all imports underneath here.
-import { GridCell } from "./classes.js";
+import { GridCell, ResultsWindow } from "./classes.js";
 
 // Exported constants
 export const GAME_CONTAINER = document.querySelector('.game-container');
@@ -47,6 +47,8 @@ if (GAME_CONTAINER.style.display != 'none') {
   var height, width, margin;
   // Append canvas to game container
   GAME_CONTAINER.appendChild(canv);
+  // Create a new instance of the results window
+  var resultsWin = new ResultsWindow(GAME_CONTAINER);
 
   // Call the set dimensions function
   setDimensions();
@@ -77,11 +79,13 @@ export function gameLoop(timeNow) {
   timeDelta = (timeNow - timeLast) / 1000; // seconds
   timeLast = timeNow;
   // update go computer function
-  computerTurn(timeDelta)
+  computerTurn(timeDelta);
   // Fill the canvas background color
   fillCanvasBackground();
   // Draw the grid
   drawGrid();
+  // Call the display result function
+  displayResult();
 
   // call the next frame
   requestAnimationFrame(gameLoop);
@@ -92,6 +96,7 @@ function click() {
 
   if (gameOver) {
     newGame();
+    resultsWin.hide();
     return;
   }
 
@@ -443,6 +448,27 @@ function computerTurn(delta) {
 
   // set the delay
   timeComp = DELAY_COMP;
+}
+
+/**Function [displayResult] - Displays the result of the winner*/
+function displayResult() {
+  // Exit function if gameover variable does not equal true.
+  if (!gameOver) {
+    return;
+  }
+
+  let text;
+  if (gameTied) {
+    text = TEXT_TIE;
+  } else {
+    if (playersTurn) {
+      text = SETTINGS.playerName + '  ' + TEXT_PLAYER_WIN;
+    } else {
+      text = TEXT_COMP + '  ' + TEXT_COMP_WIN;
+    }
+  }
+  // Play sound & Show results window
+  resultsWin.show(text);
 }
 
 // Export functions for testing purposes
