@@ -6,7 +6,7 @@
 
 // Imports - Add all imported functions and classes underneather this line.
 import { SETTINGS, GAME_CONTAINER, HERO_CONTAINER, gameLoop, newGame } from "./game.js";
-import { ConvertColor } from "./classes.js";
+import { ConvertColor, AddGameSound } from "./classes.js";
 
 // Constants
 const START_BTN = document.getElementById('start-game-btn');
@@ -46,6 +46,7 @@ OPTIONS_MENU_SAVE_BTN.addEventListener('click', () => {
 function startGame() {
 
   // Variables
+  let newGameSound = new AddGameSound('assets/audio/game-started.mp3');
   let pName = document.getElementById('p-name').value;
   let pColor = document.getElementById('p-color').value;
   let cColor = document.getElementById('c-color').value;
@@ -93,4 +94,6 @@ function startGame() {
   newGame();
   // Close the options menu
   OPTIONS_MENU.style.display = 'none';
+  // Play new game sound
+  newGameSound.play(SETTINGS.gameSounds);
 }
