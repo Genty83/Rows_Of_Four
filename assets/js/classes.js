@@ -233,6 +233,7 @@ export class AddGameSound {
 
     // Create the audio tag
     this.audioTag = document.createElement('audio');
+    this.audioTag.src = this.src;
     document.body.append(this.audioTag);
   }
 
@@ -242,6 +243,7 @@ export class AddGameSound {
    */
   play(state) {
     if (state) {
+      this.audioTag.currentTime = 0;
       this.audioTag.play();
     }
   }
