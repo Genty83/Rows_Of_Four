@@ -299,6 +299,27 @@ canvas {
     color: #f2ff04;
 }
 
+/* -- Results window styling -- */
+.results-win {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f5f5ea;
+    color: #191919;
+    box-shadow: 5px 5px 15px #2a2727;
+    display: none;
+    place-items: center;
+    padding: 5%;
+}
+.results-win h1 {
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+}
+
 /* -- ** MEDIA QUERIES ** -- */
 @media all and (min-width: 700px) {
 
