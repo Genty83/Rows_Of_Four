@@ -29,6 +29,7 @@ export const SETTINGS = {
 };
 // Constants
 const HOME_BTN = document.getElementById('game-home-btn');
+const SOUND_BTN = document.getElementById('game-volume-btn');
 const DELAY_COMP = 2; // seconds for the computer to take its turn
 const GRID_COLS = 7; // number of grid columns
 const GRID_ROWS = 6; // number of grid rows
@@ -51,6 +52,8 @@ if (GAME_CONTAINER.style.display != 'none') {
   var resultsWin = new ResultsWindow(GAME_CONTAINER);
   // Class instances for game sounds
   var coinSound = new AddGameSound('assets/audio/coin-drop.mp3');
+  var successSound = new AddGameSound('assets/audio/success.mp3');
+  var failSound = new AddGameSound('assets/audio/fail.mp3');
 
   // Call the set dimensions function
   setDimensions();
@@ -60,6 +63,8 @@ if (GAME_CONTAINER.style.display != 'none') {
   window.addEventListener("resize", setDimensions); 
   // Connects the home icon button to go back to landing page
   HOME_BTN.addEventListener('click', goToHomePage);
+  // Add event listener for sound button
+  SOUND_BTN.addEventListener('click', toggleSound);
   // Add click events to canvas
   canv.addEventListener("click", click);
   canv.addEventListener("mousemove", highlightGrid);
@@ -458,6 +463,14 @@ function displayResult() {
   // Exit function if gameover variable does not equal true.
   if (!gameOver) {
     return;
+  } else {
+    if (playersTurn) {
+      // Play success game sound
+      successSound.play(SETTINGS.gameSounds);
+    } else {
+      // Play fail sound
+      failSound.play(SETTINGS.gameSounds);
+    }
   }
 
   let text;
@@ -472,6 +485,17 @@ function displayResult() {
   }
   // Play sound & Show results window
   resultsWin.show(text);
+}
+
+/** Function [toggleSound] - Toggles the game sound on or off */
+function toggleSound() {
+  if (SETTINGS.gameSounds) {
+    SETTINGS.gameSounds = false;
+    SOUND_BTN.textContent = 'volume_off';
+  } else {
+    SETTINGS.gameSounds = true;
+    SOUND_BTN.textContent = 'volume_up';
+  }
 }
 
 // Export functions for testing purposes
