@@ -219,3 +219,40 @@ export class ResultsWindow {
     this.win.style.display = 'none';
   }
 }
+
+// Game sound class
+export class AddGameSound {
+  /**
+   * Class for adding an audio tag to the document body
+   * Contains method for playing, pausing and resetting
+   *  the sound passed in to the constructor
+   * @param {String} src - The source path for the sound to be added to the audio tag
+   */
+  constructor(src) {
+    this.src = src;
+
+    // Create the audio tag
+    this.audioTag = document.createElement('audio');
+    document.body.append(this.audioTag);
+  }
+
+  /**
+   * Method - Plays the sound from the file passed in the constructor
+   * @param {Boolean} state - If true is passed in, the sound will play
+   */
+  play(state) {
+    if (state) {
+      this.audioTag.play();
+    }
+  }
+
+  /**
+   * Method - Pauses the sound from the file passed in the constructor
+   * @param {Boolean} state - If true is passed in, the sound will pause
+   */
+  pause(state) {
+    if (state) {
+      this.audioTag.pause();
+    }
+  }
+}
