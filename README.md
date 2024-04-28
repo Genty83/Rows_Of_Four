@@ -4,6 +4,8 @@
 
 Rows Of Four is an extension of the popular game connect 4.
 
+The game was created by Howard Wexler, and first sold under the Connect Four trademark by Milton Bradley in February 1974.
+
 This website is created to have fun playing this game against the computer. 
 
 Visit the deployed website [here]().
@@ -40,3 +42,28 @@ Visit the deployed website [here]().
 8. [Acknowledgements](#acknowledgements)
 
 ***
+
+## User Experience (UX)
+
+### Project Goals
+
+* The website provides a structure easy to understand and navigate.
+
+* Contains fun colors and interactivity to engage the player in the game play.
+
+* Responsive design to make the game accessible on different devices.
+
+* Incorporates a instructions section that is easily accessible to the player.
+
+
+### User Stories
+
+* As a player, I want the game's website to be easy to navigate.
+
+* As a player, I want the game to be fun and engaging.
+
+* As a player, I want to have easy access to the game instructions.
+
+* As a player, I want the game controls to be easy to access during the game.
+
+* As a player, I want to be able to play the game on different devices.
