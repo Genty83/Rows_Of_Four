@@ -36,9 +36,7 @@ Visit the deployed website [here]().
 6. [Deployment](#deployment)
     1. [GitHub Pages](#github-pages)
 7. [Credits](#credits)
-    1. [Content](#content)
-    2. [Media](#media)
-    3. [Code](#code)
+    1. [Code](#code)
 8. [Acknowledgements](#acknowledgements)
 
 ***
