@@ -78,7 +78,7 @@ The colours take inspiration from the original board and coin colours from the g
 
 ### Typography
 
-The main font used in the site is Cinzel, with a fallback font of serif as suggested by google fonts.
+The main font used in the site is Cinzel, with a fallback font of Serif as suggested by google fonts.
 
 ### Wireframes
 
@@ -130,3 +130,104 @@ Game section| ![Game section desktop image](./assets/images/readme/game-page-des
 *  This single page is being shown in case the customer enters an incorrect address into the address bar. It contains a link to the home section.
 
 [Back to top ⇧](#Rows_Of_Four)
+
+## Technologies Used
+
+### Languages Used
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries and Programs Used
+
+* [Google Fonts](https://fonts.google.com/)
+    - Google Fonts was used to import the fonts Cinzel and Odibee Sans into the style.css file. These fonts were used throughout the site.
+
+* [Font Awesome](https://fontawesome.com/)
+     - Font Awesome was used throughout all pages to add icons in order to create a better visual experience for UX purposes.
+
+* [VsCode](https://vscode.com/)
+     - VsCode was used for writing code, committing, and then pushing to GitHub.
+
+* [GitHub](https://github.com/)
+     - GitHub was used to store the project after pushing.
+
+* [Figma](https://figma.com/)
+     - Figma was used to create the wireframes during the design phase of the project.
+
+* [Am I Responsive?](http://ami.responsivedesign.is/#)
+    - Am I Responsive was used in order to see responsive design throughout the process and to generate mockup imagery to be used.
+
+* [Responsive Design Checker](https://www.responsivedesignchecker.com/)
+    - Responsive Design Checker was used in the testing process to check responsiveness on various devices.
+
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+    - Chrome DevTools was used during development process for code review and to test responsiveness.
+
+* [W3C Markup Validator](https://validator.w3.org/)
+    - W3C Markup Validator was used to validate the HTML code.
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+    - W3C CSS Validator was used to validate the CSS code.
+
+* [JSHint](https://jshint.com/) 
+    - The JSHints JavaScript Code Quality Tool was used to validate the site's JavaScript code.
+
+
+[Back to top ⇧](#Rows_Of_Four)
+
+## Testing
+
+### Testing User Stories
+
+* As a player, I want the game's website to be easy to navigate.
+
+    - The website offers an intuitive structure for the player to find easily the information or section they are looking for.
+
+    - The navigation bar is clearly presented to assist with the site's navigation.
+
+* As a player, I want the game to be fun and engaging.
+
+    - The game offers a level of customization for the user to change display aspects of the game. 
+
+    - The computer difficulty is random offering players of all ages the abilty to beat the game.
+
+* As a player, I want to have easy access to the game instructions.
+
+    - The instructions are presents in a popup window easily accessable by clicking a button.
+
+* As a player, I want the game controls to be easy to access during the game.
+
+    - The game highlights on the board the colour of the player whos turn it is and where the coin will drop.
+
+    - The controls are described in the instructions popup.
+
+* As a player, I want to be able to play the game on different devices.
+
+    - The game has been fully tested for responsiveness accross all devices.
+
+### Code Validation
+
+* The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) services were used to validate all pages of the project in order to ensure there were no syntax errors.
+
+    - W3C Markup Validator returned no errors in the code but returned 1 info warning regarding a trailing slash on a link tag.
+
+    ![HTML validator image](./assets/images/readme/html-validator-img.png)
+
+    -  W3C CSS Validator found no errors or warnings on my CSS.
+
+    ![CSS validator image](./assets/images/readme/css-validator-img.png)
+
+* The [JSHints JavaScript Code Quality Tool](https://jshint.com/) was used validate the site's JavaScript code.
+
+    - [classes module] - No errors or warning were found on this file.
+
+    ![JsHint validator image](./assets/images/readme/classes-jshint-img.png)
+
+    - [game module] - One missing colon warning was found which has now been resolved.
+
+    ![JsHint validator image](./assets/images/readme/game-jshint-img.png)
+
+    - [index module] - Two warning were showing as a result of missing semicolons. These errors how now been resolved.
+
+    ![JsHint validator image](./assets/images/readme/index-jshint-img.png)
