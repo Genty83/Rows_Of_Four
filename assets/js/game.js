@@ -354,7 +354,7 @@ export function newGame() {
   gameOver = false;
   gameTied = false;
   // Call the createGrid function
-  createGrid()
+  createGrid();
 }
 
 /**Function [goComputer] - Calculates the computers turn.
