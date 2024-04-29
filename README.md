@@ -231,3 +231,127 @@ Game section| ![Game section desktop image](./assets/images/readme/game-page-des
     - [index module] - Two warning were showing as a result of missing semicolons. These errors how now been resolved.
 
     ![JsHint validator image](./assets/images/readme/index-jshint-img.png)
+
+### Accessibility
+
+* Used Lighthouse in Chrome DevTools to confirm that the colors and fonts being used in throughout the website are easy to read and accessible.
+
+* Lighthouse reports
+
+    - **index.html**
+
+    ![Lighthouse report for landing page image](./assets/images/readme/landing-page-lighthouse-img.png)
+
+    - **404.html**
+
+    ![Lighthouse report for 404 page image](./assets/images/readme/404-lighthouse-img.png)
+
+### Tools Testing
+
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+
+    - Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.
+
+* Responsiveness
+
+    - [Am I Responsive?](http://ami.responsivedesign.is/#) was used to check responsiveness of the site pages across different devices.
+
+    - [Responsive Design Checker](https://www.responsivedesignchecker.com/) was used to check responsiveness of the site pages on different screen sizes.
+
+    - Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
+
+* Device compatibility
+
+Device | Outcome | Pass/Fail
+--- | --- | ---
+MacBook Pro 15" | No appearance, responsiveness nor functionality issues. | Pass
+Dell Latitude 5300 | No appearance, responsiveness nor functionality issues. | Pass
+iPad Pro 12.9" | No appearance, responsiveness nor functionality issues. | Pass
+iPad Pro 10.5" | No appearance, responsiveness nor functionality issues. | Pass
+iPhone XR | No appearance, responsiveness nor functionality issues. | Pass
+iPhone 7 | No appearance, responsiveness nor functionality issues. | Pass
+
+* Common Elements Testing
+
+    - General
+
+    Feature | Outcome | Pass/Fail
+    --- | --- | ---
+    Navigation Bar | Hover effect and links are working as expected. | Pass
+    Social Links | Open the specific website on a new tab. | Pass
+
+    - Home Section
+    
+    Feature | Outcome | Pass/Fail
+    --- | --- | ---
+    Start Game Button | Hover effect work and link to game section when button is clicked work as expected. | Pass
+    Instructions Button | Hover effect work as expected and open instructions form popup when clicked. | Pass
+
+    - Game Section
+
+    Feature | Outcome | Pass/Fail
+    --- | --- | ---
+    Navbar button | The buttons work as expected | Pass
+    Game board | The board hovering works as expected highlighting the correct cell | Pass
+
+    - 404 Error Page
+
+    Feature | Outcome | Pass/Fail
+    --- | --- | ---
+    404 Error Page | Entering an incorrect address into the address bar bring the player to the 404 error page. | Pass
+    Back to the Game Button | Hover effect work and link to home section when button is clicked work as expected. | Pass
+
+[Back to top ⇧](#Rows_Of_Four)
+
+## Finished Product
+
+Page / Section | Image
+--- | ---
+Desktop Version | ![Desktop version image](./assets/images/readme/homepage-desktop.png)
+Mobile Version | ![Home section image](./assets/images/readme/mobile-img.png)
+Options Popup | ![Options popup image](./assets/images/readme/game-options-popup.png)
+Instructions Section | ![Home section image](./assets/images/readme/instructions-popup.png)
+Game Section | ![Game section image](./assets/images/readme/game-page.png)
+404 Error Page | ![404 error page image](./assets/images/readme/404-page.png)
+
+[Back to top ⇧](#Rows_Of_Four)
+
+## Deployment
+
+* This website was developed using [GitPod](https://www.gitpod.io/), which was then committed and pushed to GitHub using the GitPod terminal.
+
+### GitHub Pages
+
+* Here are the steps to deploy this website to GitHub Pages from its GitHub repository:
+
+    1. Log in to GitHub and locate the [GitHub Repository](https://github.com/).
+
+    2. At the top of the Repository, locate the Settings button on the menu.
+
+        - Alternatively click [here](https://raw.githubusercontent.com/) for a GIF demostration of the process.
+
+    3. Scroll down the Settings page until you locate the Pages section.
+
+    4. Under Source, click the dropdown called None and select Master Branch.
+
+    5. The page will refresh automatically and generate a link to your website.
+
+[Back to top ⇧](#Rows_Of_Four)
+
+## Credits
+
+### Code
+
+* [Stack Overflow](https://stackoverflow.com/), [CSS-Tricks](https://css-tricks.com/) and [W3Schools](https://www.w3schools.com/) were consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.
+
+[Back to top ⇧](#Rows_Of_Four)
+
+## Acknowledgements
+
+* My partner, for her unconditional love, help and continued support in all aspects of life to make possible for me to complete this project.
+
+* My tutor, Marcel, for his invaluable feedback and guidance.
+
+* Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
+
+[Back to top ⇧](#Rows_Of_Four)
