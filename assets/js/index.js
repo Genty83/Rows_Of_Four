@@ -35,13 +35,12 @@ if (HERO_CONTAINER.style.display != 'none') {
 START_BTN.addEventListener('click', () => {
   OPTIONS_MENU.style.display = 'grid';
   disableEvents(true);
-})
-
+});
 
 OPTIONS_MENU_CLOSE_BTN.addEventListener('click', () => {
   OPTIONS_MENU.style.display = 'none';
   disableEvents(false);
-})
+});
 
 OPTIONS_MENU_SAVE_BTN.addEventListener('click', () => {
   startGame();
