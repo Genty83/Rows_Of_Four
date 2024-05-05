@@ -106,7 +106,7 @@ function startGame() {
 
 /**
  * Function [disableEvents] - Disable/enable pointer events for containers
- * @param {Boolean} state - Boolean value to determine evenets on or off
+ * @param {Boolean} state - Boolean value to determine events on or off
  */
 function disableEvents(state) {
 
