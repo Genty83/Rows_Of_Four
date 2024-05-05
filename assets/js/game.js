@@ -27,6 +27,7 @@ export const SETTINGS = {
   frameColorDark: 'navy',
   gameSounds: true
 };
+
 // Constants
 const HOME_BTN = document.getElementById('game-home-btn');
 const SOUND_BTN = document.getElementById('game-volume-btn');
@@ -497,5 +498,3 @@ function toggleSound() {
     SOUND_BTN.textContent = 'volume_up';
   }
 }
-
-// Export functions for testing purposes
