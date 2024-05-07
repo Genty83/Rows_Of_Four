@@ -34,6 +34,14 @@ index.html | ![html validator image](./assets/images/readme/html-validator-img.p
 
 File | Image | Pass/Fail | Comments 
 --- | --- | --- | ---
-style.css | ![html validator image](./assets/images/readme/css-validator-img.png) | Pass | CSS file passed through with no errors or warnings.
+style.css | ![css validator image](./assets/images/readme/css-validator-img.png) | Pass | CSS file passed through with no errors or warnings.
+
+### JsHint Code Quality Tool
+
+File | Image | Pass/Fail | Comments 
+--- | --- | --- | ---
+index.js | ![JsHint image](./assets/images/readme/index-jshint-img.png) | Pass | 2 warning were shown for missing semicolons. These have now been resolved.
+game.js | ![JsHint image](./assets/images/readme/game-jshint-img.png) | Pass | 1 warning for a missing semicolon was shown which has now been resolved.
+classes.js | ![JsHint image](./assets/images/readme/classes-jshint-img.png) | Pass | No issues were found when passing the file through the validator.
 
 [Back to top ⇧](#Testing)
