@@ -66,3 +66,21 @@ Mobile | ![Lighthouse image](./assets/images/readme/404-mobile-lighthouse-img.pn
 
 ## Browser Compatibility
 
+**Desktop**  
+
+Browser | Outcome | Pass/Fail
+--- | --- | ---
+Google Chrome  | No issues were found | Pass
+Microsoft Edge | No issues found | Pass
+Firefox | No issues found | Pass
+
+**Mobile**  
+
+Device | Outcome | Pass/Fail
+--- | --- | ---
+MacBook Pro 15" | No appearance, responsiveness nor functionality issues. | Pass
+Dell Latitude 5300 | No appearance, responsiveness nor functionality issues. | Pass
+iPad Pro 12.9" | No appearance, responsiveness nor functionality issues. | Pass
+iPad Pro 10.5" | No appearance, responsiveness nor functionality issues. | Pass
+iPhone XR | No appearance, responsiveness nor functionality issues. | Pass
+iPhone 7 | No appearance, responsiveness nor functionality issues. | Pass
