@@ -51,16 +51,18 @@ classes.js | ![JsHint image](./assets/images/readme/classes-jshint-img.png) | Pa
 ### index.html file
 
 Screen Size | Image | Pass/Fail | Comments 
+--- | --- | --- | ---
 Desktop | ![Lighthouse image](./assets/images/readme/landing-page-lighthouse-img.png) | Pass | No issues found when lighthouse report was ran on desktop version.
 Mobile | ![Lighthouse image](./assets/images/readme/landing-page-lighthouse-img.png) | Pass | No issues found when lighthouse report was ran on mobile version.
 
 ### 404.html file
 
 Screen Size | Image | Pass/Fail | Comments 
+--- | --- | --- | ---
 Desktop | ![Lighthouse image](./assets/images/readme/404-lighthouse-img.png) | Pass | No issues found when lighthouse report was ran on desktop version.
 Mobile | ![Lighthouse image](./assets/images/readme/404-mobile-lighthouse-img.png) | Pass | No issues found when lighthouse report was ran on mobile version.
 
 [Back to top ⇧](#Testing)
 
-## Browser Compatability
+## Browser Compatibility
 
