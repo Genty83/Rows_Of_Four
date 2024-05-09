@@ -1,0 +1,14 @@
+{
+  "name": "rows_of_four",
+  "version": "1.0.0",
+  "description": "![Rows Of Four mockup images](./assets/images/readme/mockup-img.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
