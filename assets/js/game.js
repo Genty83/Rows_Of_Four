@@ -150,7 +150,7 @@ function checkWin(row, col) {
 }
 
 /**Function [winner] - Checks the board for a potential winner */
-function winner(cells = []) {
+export function winner(cells = []) {
 
   let count = 0, lastOwner = null;
   let winningCells = [];
