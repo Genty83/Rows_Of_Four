@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { winner } from "../assets/js/game.js"
+import { winner } from "../js/game.js"
 
 
 describe('Testing the winner function', () => {
