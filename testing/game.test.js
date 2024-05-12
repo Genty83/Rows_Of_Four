@@ -2,9 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { describe } from "yargs";
-import { winner } from "../assets/js/game";
-import { expect } from "@jest/globals";
+import { winner } from "../assets/js/game.js"
 
 
 describe('Testing the winner function', () => {
@@ -13,4 +11,4 @@ describe('Testing the winner function', () => {
 		const arr = [];
 		expect(winner(arr)).toBe(false);
 	})
-})
+}) 
