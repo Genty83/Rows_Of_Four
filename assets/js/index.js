@@ -5,7 +5,8 @@
  */
 
 // Imports - Add all imported functions and classes underneather this line.
-import { SETTINGS, GAME_CONTAINER, HERO_CONTAINER, gameLoop, newGame } from "./game.js";
+import { SETTINGS, GAME_CONTAINER, 
+  HERO_CONTAINER, gameLoop, newGame, initializeGame } from "./game.js";
 import { ConvertColor, AddGameSound } from "./classes.js";
 
 // Constants
@@ -94,6 +95,8 @@ function startGame() {
   GAME_CONTAINER.style.display = 'flex';
   // game loop
   requestAnimationFrame(gameLoop);
+
+  initializeGame();
   // Call newGame function
   newGame();
   // Close the options menu
