@@ -4,7 +4,7 @@
   "description": "![Rows Of Four mockup images](./assets/images/readme/mockup-img.png)",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "transform": {
