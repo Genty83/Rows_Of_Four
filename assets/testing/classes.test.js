@@ -9,7 +9,7 @@ describe('ConvertColor class testing', () => {
   const clrHEX = new ConvertColor('#ff0000', -20);
   const clrRGB = new ConvertColor('rgb(255,0,0)', -20);
   const clrHSL = new ConvertColor('hsl(0, 100%, 50%)', -20);
-  const clr50 = new ConvertColor('#003499', -30);
+  const clr50 = new ConvertColor('#003499', -50);
 
 
   jest.spyOn(clrHEX, 'shadeColor');
@@ -30,6 +30,6 @@ describe('ConvertColor class testing', () => {
   });
 
   it('should return a darker shade of blue by 50% passing in a HEX color', () => {  
-    expect(clrHSL.shadeColor()).toEqual('#001a4c')
+    expect(clr50.shadeColor()).toEqual('#001a4c')
   });
 });
