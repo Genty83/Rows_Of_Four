@@ -12,7 +12,7 @@ This site has been tested using the following testing procedures
 
 * [Manual Testing](#Manual-Testing-Issues)
 
-* [Automated Testing](#Automated-Testing)
+* [Automated Testing](#Automated-Testing-Issues)
 
 ## Code Validation
 
