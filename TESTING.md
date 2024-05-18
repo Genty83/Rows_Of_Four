@@ -88,30 +88,43 @@ iPhone 7 | No appearance, responsiveness nor functionality issues. | Pass
 
 ## Manual Testing Issues
 
-**index.html**
+### Landing Page
 
-* A trailing slash in a link tag was picked up in the W3C validator. This was removed to clear the issue.
+### Testing User Stories
 
-**style.css**
+* As a player, I want the game's website to be easy to navigate.
 
-* Online resources were used to assist me with styling the color picker input box. 
+    - The website offers an intuitive structure for the player to find easily the information or section they are looking for.
 
-**index.js**
+    - The navigation bar is clearly presented to assist with the site's navigation.
 
-* There was a small bug in the startGame function where the user could select the same colour coins and board colour. Alogical statememnt was added that shows an alert window to notify the user and prevent this happening.
+* As a player, I want the game to be fun and engaging.
 
-**game.js**
+    - The game offers a level of customization for the user to change display aspects of the game. 
 
-* There was asmall issue with the board resizing due to the height and width variables in the setDimesions function.
-These variables have been adjusted to rectify this issue.
+    - The computer difficulty is random offering players of all ages the abilty to beat the game.
 
-* There is an issue with the game restarting when you resize the browser window. I am currently unable to solve this issue.
+* As a player, I want to have easy access to the game instructions.
 
-* An if statement was added to the displayResults function to play the winner and loser sounds. This was moved from its orignal location in the newGame function.
+    - The instructions are presents in a popup window easily accessable by clicking a button.
 
-**classes.js**
+* As a player, I want the game controls to be easy to access during the game.
 
-* Stacked overflow and some other additional online sources were used to create thew functions to convert a colour from RGB to HSL and RGB to HEX in the CovertColor class.
+    - The game highlights on the board the colour of the player whos turn it is and where the coin will drop.
+
+    - The controls are described in the instructions popup.
+
+* As a player, I want to be able to play the game on different devices.
+
+    - The game has been fully tested for responsiveness accross all devices.
+
+Test | Outcome | Pass/Fail
+--- | --- | ---
+Facebook | When clicking on the facebook link, it opens a new page in the browser and redirects me to the site. | Pass
+Instagram | When clicking on the instagram link, it opens a new page in the browser and redirects me to the site. | Pass
+Twitter | When clicking on the twitter link, it opens a new page in the browser and redirects me to the site. | Pass
+Twitter | When clicking on the twitter link, it opens a new page in the browser and redirects me to the site. | Pass
+
 
 ## Automated Testing Issues
 
