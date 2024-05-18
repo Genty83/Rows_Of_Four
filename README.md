@@ -272,7 +272,7 @@ Game Section | ![Game section image](./assets/images/readme/game-page.png)
 
 ## Deployment
 
-* This website was developed using [GitPod](https://www.gitpod.io/), which was then committed and pushed to GitHub using the GitPod terminal.
+* This website was developed using [VsCode](https://www.vscode.io/), which was then committed and pushed to GitHub using the GitPod terminal.
 
 ### GitHub Pages
 
