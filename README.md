@@ -176,33 +176,15 @@ Game section| ![Game section desktop image](./assets/images/readme/game-page-des
 
 ## Testing
 
+Please review the testing file to view all the manual testing for this project.
+
 * [Manual Testing](./TESTING.md)
 
 ### Code Validation
 
-* The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) services were used to validate all pages of the project in order to ensure there were no syntax errors.
+Please review the testing file to view all the code validation for this project.
 
-    - W3C Markup Validator returned no errors in the code but returned 1 info warning regarding a trailing slash on a link tag.
-
-    ![HTML validator image](./assets/images/readme/html-validator-img.png)
-
-    -  W3C CSS Validator found no errors or warnings on my CSS.
-
-    ![CSS validator image](./assets/images/readme/css-validator-img.png)
-
-* The [JSHints JavaScript Code Quality Tool](https://jshint.com/) was used validate the site's JavaScript code.
-
-    - [classes module] - No errors or warning were found on this file.
-
-    ![JsHint validator image](./assets/images/readme/classes-jshint-img.png)
-
-    - [game module] - One missing colon warning was found which has now been resolved.
-
-    ![JsHint validator image](./assets/images/readme/game-jshint-img.png)
-
-    - [index module] - Two warning were showing as a result of missing semicolons. These errors how now been resolved.
-
-    ![JsHint validator image](./assets/images/readme/index-jshint-img.png)
+* [Manual Testing](./TESTING.md)
 
 ### Accessibility
 
