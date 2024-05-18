@@ -8,7 +8,7 @@ The game was created by Howard Wexler, and first sold under the Connect Four tra
 
 This website is created to have fun playing this game against the computer. 
 
-Visit the deployed website [here]().
+Visit the deployed website [here](https://genty83.github.io/Rows_Of_Four/).
 
 ## Table of Contents
 
@@ -176,33 +176,7 @@ Game section| ![Game section desktop image](./assets/images/readme/game-page-des
 
 ## Testing
 
-### Testing User Stories
-
-* As a player, I want the game's website to be easy to navigate.
-
-    - The website offers an intuitive structure for the player to find easily the information or section they are looking for.
-
-    - The navigation bar is clearly presented to assist with the site's navigation.
-
-* As a player, I want the game to be fun and engaging.
-
-    - The game offers a level of customization for the user to change display aspects of the game. 
-
-    - The computer difficulty is random offering players of all ages the abilty to beat the game.
-
-* As a player, I want to have easy access to the game instructions.
-
-    - The instructions are presents in a popup window easily accessable by clicking a button.
-
-* As a player, I want the game controls to be easy to access during the game.
-
-    - The game highlights on the board the colour of the player whos turn it is and where the coin will drop.
-
-    - The controls are described in the instructions popup.
-
-* As a player, I want to be able to play the game on different devices.
-
-    - The game has been fully tested for responsiveness accross all devices.
+* [Manual Testing](./TESTING.md)
 
 ### Code Validation
 
@@ -325,8 +299,6 @@ Game Section | ![Game section image](./assets/images/readme/game-page.png)
     1. Log in to GitHub and locate the [GitHub Repository](https://github.com/).
 
     2. At the top of the Repository, locate the Settings button on the menu.
-
-        - Alternatively click [here](https://raw.githubusercontent.com/) for a GIF demostration of the process.
 
     3. Scroll down the Settings page until you locate the Pages section.
 
