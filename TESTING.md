@@ -10,7 +10,7 @@ This site has been tested using the following testing procedures
 
 * [Browser Compatibility](#Browser-Compatibility)
 
-* [Manual Testing](#Manual-Testing)
+* [Manual Testing](#Manual-Testing-Issues)
 
 * [Automated Testing](#Automated-Testing)
 
