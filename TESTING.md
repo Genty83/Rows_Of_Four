@@ -88,8 +88,6 @@ iPhone 7 | No appearance, responsiveness nor functionality issues. | Pass
 
 ## Manual Testing Issues
 
-### Landing Page
-
 ### Testing User Stories
 
 * As a player, I want the game's website to be easy to navigate.
@@ -118,16 +116,51 @@ iPhone 7 | No appearance, responsiveness nor functionality issues. | Pass
 
     - The game has been fully tested for responsiveness accross all devices.
 
+### Landing Page
+
 Test | Outcome | Pass/Fail
 --- | --- | ---
 Facebook | When clicking on the facebook link, it opens a new page in the browser and redirects me to the site. | Pass
 Instagram | When clicking on the instagram link, it opens a new page in the browser and redirects me to the site. | Pass
 Twitter | When clicking on the twitter link, it opens a new page in the browser and redirects me to the site. | Pass
 Twitter | When clicking on the twitter link, it opens a new page in the browser and redirects me to the site. | Pass
+Instructions Button | When the instruction button is clicked, it opens the instructions window | Pass
+New Game Button | When the new game button is clicked it pens the options menu window | Pass
+Intructions Window | When the instructions window is open, there is a close button present for the user to close the window | Pass
+Instructions Window | When the instructions window is open, it prevents the user from clicking anywhere else on the page until the window is closed | Pass
+Game Options Window | The game options window has a working close button to provide the uoption for the user to close the window | Pass
+Game Options Window | The game options window provides an input field for entering the users name. | Pass
+Game Options Window | The options game window provides the controls required for changing the appearance of the game. | Pass
+Game Options Window | The game options menu provides a button to save the user changes | Pass
+Game Options Window | Clicking the save button directs the user to the game | Pass
+Game Options Window | The changes made in the options menu are reflected when the game starts | Pass
+
+### 404 Page
+
+Test | Outcome | Pass/Fail
+--- | --- | ---
+Return Home Button | Clicking the return home button takes the user back to the home page | Pass
+
+### Game page
+
+Test | Outcome | Pass/Fail
+--- | --- | ---
+Header | The header provides an icon button to redirect the user back to the landing page | Pass
+Header | The header provides an icon button to mute and un-mute the in game sounds | Pass
+Game board | When the user hovers over a cell, the cell is highlighted in the user chosen colour | Pass
+Game Board | When the user clicked on a cell, the coin is visible in the expected location on the board | Pass
+Game Board | When the user has 4 coins in a row, a popup window is displayed to show the user they have won the game | Pass
+Game Board | When the computer has 4 coins in a row, a popup window is displayed to show the user the computer has won the game | Pass
+Game Board | The game is over when the user or computer has 4 coins in a row either vertically, horintally or diagonally in both directions | Pass
+Game board | Changes made in the game options menu are reflected in the appearance of the game board | Pass
+Popup window | The end of game popup window displays the correct game winner information | Pass
+Popup window | When the end of game popup is displayed, clicking anywhere in the window ouside the popup window starts a new game | Pass
+Game Sounds | The game sounds work as expected | Pass
 
 
 ## Automated Testing Issues
 
+Jest was used to run a small amount of automated test on the ColorConvertor class. All these tests passed.
 
 
 [Back to top ⇧](#Testing)
