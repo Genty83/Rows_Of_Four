@@ -1,11 +1,6 @@
 /**
  * Classes module:
  * This module contains all the relevent class for the project.
- * Below is a list of the classes present in the file.
- * 
- * >>> GridCell:  This class is used to draw the coin on the board
- * >>> ConvertColor: This class coverts the passed in color to a darker shade at the % specified
- * >>> ResultsWindow: Class for creating the results window to be displayed when the game is over
  */
 
 /**Class [GridCell] - This class is used to draw the coin on the board */

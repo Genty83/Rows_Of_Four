@@ -2,12 +2,6 @@
  * Game module:
  * This module contains all the code for the game.
  * All game related functions are to be added to this file.
- * 
- * A complete list of functions can be seen below.
- * >>> goToHomePage - Takes you back to the home page.
- * >>> gameLoop - Starts the game loop.
- * >>> setDimensions - Sets the canvas dimensions.
- * >>> fillCanvasBackground - Fills the canvas background color.
  */
 
 // Imports - All all imports underneath here.
